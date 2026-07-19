@@ -29,7 +29,7 @@ class CarModel(models.Model):
         on_delete=models.CASCADE,
         related_name="models"
     )
-    dealer_id = models.IntegerField()
+    dealer_id = models.IntegerField(default=0)
     name = models.CharField(max_length=100)
     type = models.CharField(
         max_length=20,
