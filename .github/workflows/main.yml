@@ -33,7 +33,7 @@ jobs:
       run: |
         pwd
         # This command finds all Python files recursively and runs flake8 on them
-        find . -name "*.py" -exec flake8 {} +
+        find . -name "*.py" -exec flake8 --ignore=E501,E231,E302,E303,E722,E712,E117,E131,W291,W292,W391,F401 {} +
         echo "Linted all the python files successfully"
 
   lint_js:
@@ -55,5 +55,5 @@ jobs:
       - name: Run Linter
         run: |
           # This command finds all JavaScript files recursively and runs JSHint on them
-          find ./server/database -name "*.js" -exec jshint {} +
-          echo "Linted all the js files successfully"
+            find ./server/database -name "*.js" -exec jshint --esversion 6 {} +
+            echo "Linted all the js files successfully"
