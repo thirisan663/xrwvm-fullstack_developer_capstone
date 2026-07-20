@@ -1,4 +1,7 @@
 {
     "esversion": 8,
-    "expr": true
+    "expr": true,
+    "asi": true,
+    "sub": true,
+    "node": true
 }
